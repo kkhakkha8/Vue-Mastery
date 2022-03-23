@@ -10,7 +10,8 @@ const app = Vue.createApp({
             image: './assets/images/socks_green.jpg',
             url : 'https://www.youtube.com',
             inStock: true,
-            invetory : 100
+            invetory : 100,
+            onSale : true
         }
     }
 })
