@@ -8,7 +8,9 @@ const app = Vue.createApp({
         return{
             product : 'Socks',
             image: './assets/images/socks_green.jpg',
-            url : 'https://www.youtube.com'
+            url : 'https://www.youtube.com',
+            inStock: true,
+            invetory : 100
         }
     }
 })
