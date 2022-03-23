@@ -15,7 +15,7 @@
         Cart({{ cart }})
       </div>
 
-      <h1>{{product}}</h1>
+      <h1>{{title}}</h1>
       <!-- {{showDesc()}} -->
       <a :href="url">Youtube</a>
 
@@ -27,14 +27,18 @@
           </div>
           <div class="product-info">
             <!-- <p v-show="inStock">In stock</p> -->
-            <p v-if="invetory > 10">In stock</p>
-            <p v-else-if="invetory <= 10 && invetory > 0">Almost sold out !</p>
+            <p v-if="inStock">In stock</p>
             <p v-else>Out of stock</p>
             <p v-show="onSale">On Sale</p>
             <ul>
               <li v-for="detail in details">{{detail}}</li>
             </ul>
-            <div class="color-circle" :style="{backgroundColor:variant.color}" v-for="variant in variants" :key="variant.id" v-on:mouseover="updateImage(variant.image)" >
+            <div
+             class="color-circle" 
+             :style="{backgroundColor:variant.color}" 
+             v-for="(variant,index) in variants" 
+             :key="variant.id" 
+             v-on:mouseover="updateVariant(index)" >
                 {{}}
             </div>
             <div v-for="size in sizes">
