@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
-    
+    <!-- Vue Injection Here -->
+    <div id="app">
+        {{showDesc()}}
+        <h1>{{product}}</h1>
+    </div>
+
+    <!-- Import Vue -->
+    <script src="./app.js"></script>
+
+    <!-- Mount Vue -->
+    <script>
+        const mountedApp = app.mount('#app');
+    </script>
 </body>
 </html>
