@@ -16,7 +16,8 @@ const app = Vue.createApp({
             variants : [
                 {id : 2234, color : 'green'},
                 {id : 2235, color : 'blue'}
-            ]
+            ],
+            sizes : [33,34,35,40,42,44]
         }
     }
 })
