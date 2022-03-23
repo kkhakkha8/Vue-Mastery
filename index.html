@@ -11,9 +11,12 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
+      <div class="cart">
+        Cart({{ cart }})
+      </div>
 
       <h1>{{product}}</h1>
-      {{showDesc()}}
+      <!-- {{showDesc()}} -->
       <a :href="url">Youtube</a>
 
       <div class="product-display">
@@ -31,12 +34,13 @@
             <ul>
               <li v-for="detail in details">{{detail}}</li>
             </ul>
-            <div v-for="variant in variants" :key="variant.id">
+            <div v-for="variant in variants" :key="variant.id" v-on:mouseover="updateImage(variant.image)">
                 {{variant.color}}
             </div>
             <div v-for="size in sizes">
               {{'size - ' + size}}
             </div>
+            <button class="button" @click="addToCart">Add to cart</button>
           </div>
         </div>
       </div>
