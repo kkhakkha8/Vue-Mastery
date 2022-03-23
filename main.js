@@ -9,8 +9,8 @@ const app = Vue.createApp({
             product : 'Socks',
             image: './assets/images/socks_green.jpg',
             url : 'https://www.youtube.com',
-            inStock: true,
-            invetory : 100,
+            inStock: false,
+            invetory :0,
             onSale : true,
             details : ['50% cotton','30% wool', '20% polyester'],
             variants : [
@@ -18,7 +18,8 @@ const app = Vue.createApp({
                 {id : 2235, color : 'blue', image : './assets/images/socks_blue.jpg'}
             ],
             sizes : [33,34,35,40,42,44],
-            cart : 0
+            cart : 0,
+
         }
     },
     methods: {
